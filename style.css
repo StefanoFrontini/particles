@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --pink: hsl(322, 100%, 76%);
+  --yellow: hsl(52, 100%, 76%);
+  --blue: hsl(178, 100%, 76%);
+  --gradient: linear-gradient(
+    to right,
+    var(--pink) 0%,
+    var(--yellow) 50%,
+    var(--blue) 100%
+  );
+}
+
+#canvas1 {
+  width: 100vw;
+  height: calc(100vh - 1rem);
+  background: #000;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 1rem;
+  background: var(--gradient);
+}
